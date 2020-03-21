@@ -25,6 +25,19 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics ENDS -->
 
+    <script>
+        document.onload(() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const landingDataString = urlParams.get('landingData');
+            const landingData = JSON.parse(decodeURIComponent(urlParams.get('landingData')));
+            if(!landingData.showCloseButton) {
+                const closeButton = document.getElementById('kp-landing-close-button');
+                if (closeButton) {
+                    closeButton.remove();
+                }
+            }
+        });
+    </script>
 
     <script type="text/javascript">
       var ue_t0 = ue_t0 || +new Date()
