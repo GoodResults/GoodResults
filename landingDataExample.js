@@ -52,15 +52,8 @@ Array.prototype.generateRandomParagraphsBookDescription = function() {
   return description;
 };
 
-const examples = [
-  {
-    showCloseButton: [false, true].rand()
-  },
-  {
-    showCloseButton: false, // true / false
-    bookCover: "./media-assets/412V6YJjGNL._SL500_.jpg"
-  },
-  {
+const generateLandingData = () => {
+  return {
     showCloseButton: [false, true].rand(),
     bookCover: [
       "./media-assets/412V6YJjGNL._SL500_.jpg",
@@ -321,13 +314,29 @@ const examples = [
       ].rand()
     ].generateRandomParagraphsBookDescription(),
     price: Math.round(Math.random() * 100 * 50) / 100
-  }
+  };
+};
+
+const examples = [
+  {
+    showCloseButton: [false, true].rand()
+  },
+  {
+    showCloseButton: false, // true / false
+    bookCover: "./media-assets/412V6YJjGNL._SL500_.jpg"
+  },
+  generateLandingData()
 ];
 
-const qrtip = require("qrtip");
+const generateLandingDataQRTipped = () => {
+  return qrtip.tip(JSON.stringify(generateLandingData()));
+};
 
-console.log(qrtip.tip(JSON.stringify(examples[2])));
-console.log(examples[2]);
+if (typeof qrtip === "undefined") {
+  const qrtip = require("qrtip");
+  console.log(qrtip.tip(JSON.stringify(examples[2])));
+  console.log(examples[2]);
+}
 
 // LING: https://amzn.to/33D0QcE
 // For years, rumors of the Marsh Girl have haunted Barkley Cove, a quiet town on the North Carolina coast. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark, the so-called Marsh Girl. But Kya is not what they say. Sensitive and intelligent, she has survived for years alone in the marsh that she calls home, finding friends in

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get Your Book Now! Best Shop by Timothy Ivaikin</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-136884592-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-136884592-1");
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics ENDS -->
+    <script src="https://d2wy8f7a9ursnm.cloudfront.net/v6/bugsnag.min.js"></script>
+    <script>
+      window.bugsnagClient = bugsnag("e774c7ca6ed898268a1d6622986551d4");
+    </script>
+    <script src="./node_modules/qrtip/index.js"></script>
+    <script src="./landingDataExample.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var book = document.createElement("iframe");
+        const bookShop = document.querySelector("#book-shop-items");
+        for (let i = 0; i < 10000; ++i) {
+          bookShop.innerHTML +=
+            '<iframe title="Book" width="375" height="730" src="https://goodresults.github.io/GoodResults/?landingData=' +
+            generateLandingDataQRTipped() +
+            '"></iframe>';
+        }
+      });
+    </script>
+
+    <!-- Facebook Pixel -->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2581929498801066");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=2581929498801066&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel ENDS -->
+
+    <!-- FullStory -->
+    <script>
+      window["_fs_debug"] = false;
+      window["_fs_host"] = "fullstory.com";
+      window["_fs_script"] = "edge.fullstory.com/s/fs.js";
+      window["_fs_org"] = "HPRGN";
+      window["_fs_namespace"] = "FS";
+      (function(m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function(a, b, s) {
+          g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.crossOrigin = "anonymous";
+        o.src = "https://" + _fs_script;
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function(i, v, s) {
+          g(l, { uid: i }, s);
+          if (v) g(l, v, s);
+        };
+        g.setUserVars = function(v, s) {
+          g(l, v, s);
+        };
+        g.event = function(i, v, s) {
+          g("event", { n: i, p: v }, s);
+        };
+        g.anonymize = function() {
+          g.identify(!!0);
+        };
+        g.shutdown = function() {
+          g("rec", !1);
+        };
+        g.restart = function() {
+          g("rec", !0);
+        };
+        g.log = function(a, b) {
+          g("log", [a, b]);
+        };
+        g.consent = function(a) {
+          g("consent", !arguments.length || a);
+        };
+        g.identifyAccount = function(i, v) {
+          o = "account";
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function() {};
+        g._w = {};
+        y = "XMLHttpRequest";
+        g._w[y] = m[y];
+        y = "fetch";
+        g._w[y] = m[y];
+        if (m[y])
+          m[y] = function() {
+            return g._w[y].apply(this, arguments);
+          };
+        g._v = "1.2.0";
+      })(window, document, window["_fs_namespace"], "script", "user");
+    </script>
+    <!-- FullStory ENDS -->
+  </head>
+  <body>
+    <div style="flex-wrap: wrap; display: flex;" id="book-shop-items">
+      <!--<iframe
+        title="Book"
+        width="375"
+        height="730"
+        src="https://goodresults.github.io/GoodResults/?landingData=N4IgzgFg9g7gwgGymApgIQK4BctQHYgBcAZgIYKoA0IARlFANZxQBuKATkSAHQD0AtigAmAS1IBaUmFRYwvACwBGAEwA1AGwBNAFIArAOIA5ADLcA+gGVjAVgAMts910AHAOYhqWEVgQoAEiikQggieChcxiLEKAAE2lAY7GEAnh4gpNjQ7IakglwAKiL8UFgQyTEAYuwoKPykBNQAxhhguILsAEooLCIoMGAAgsUYeFhEyvbyAOzUIXgM+VBo9AwACuxQQhiNY4QgEDjOYIS8vLkAXnjcuLwAzLcAIrYAio0AomlCKGCN7CLOXnw+RQAA9diAADw0AB8AGJFDE0N9ZCgEL52BDeDCoexeNCAjEsKiKDFvDEQgxYmSRGBACgEpBiQmQsSgxBi7FIMEo7JQxGqkFCrm50DCrUJ7EyhIgpCwpLAMTAUGqCHKCFIjQYgsJm1IyW4MTSzj+jXChHkAA5uFNFABfIA"
+      ></iframe>
+      <iframe
+        title="Book"
+        width="375"
+        height="730"
+        src="https://goodresults.github.io/GoodResults/?landingData=N4IgzgFg9g7gwgGymApgIQK4BctQHYgBcAZgIYKoA0IARlFANZxQBuKATkSAHQD0AtigAmAS1IBaUmFRYwvACwBGAEwA1AGwBNAFIArAOIA5ADLcA+gGVjAVgAMts910AHAOYhqWEVgQoAEiikQggieChcACpQAATGImweIKTY0OyGpIKRIvzRAJIspCIMoYkAxhhguILsAEooLCIoMGAAgvxQGHhYRIoA7AAc1orUIXgMUWj0DAAK7FBCGKXdhCAQOM5ghLy8GQBeeNy4vADMxwAitgCKpQCiiUIoYKXsIs5e+BEoAB7LIAA8NAAfAB5NjsaLqaL8EQIEL4aKlKDORpgaJgKAIIR-XhAgHg3iAtAAT2iWAgKGiKDwQmiUGI0U0HWiLXYFNI0TQQSkYEo0SJHQA5LDop0HuxKqRqdEYBASfyMNFSKzotAYHymUqULzVaSYkg2NKIKQsOqFaVJQKTaUjXhXFqVbBdQibXbDcbTdEhPhLdF9fbJTSdbgRahohFydEAGJQdilCnB4qlBhoqCCNEcEQdVHc7h4gm5fjOOYG+XgmAoWHiGgoUKuSlgklCUgkmDeCAphDYTN4MBVqTCXmoBDEcTm5WVdjGlCuFGko0mmAxhjcMPZKBkkn5QrFPC8-AUulzimL9iYgWo3xBWuUr7ODiyWl4FWkGjeaLEGP8Y3d3mstjkVEi1IJYRHNBA0SwScsGnWcyXdVthWg4D23lG9gJ8EkgxiD92ByVx6EDF9vB5aIaFZUhkxoIJH0eXkAyhKRoPBMl41CElqyNBoY1ROCTUvGlg1ZL92AYF9fGiVkwAwBBZBXcNjyXOhGGiUJSk7B5UW+DhShEVASO+ZwEElb98BI+i-0aZonXJBBnAkwIxVRL8GApVAewPek33IBAVxuBtnVIN4OBUro5gWONUXIxynXZICQLA3UMXfGNogARwwUCGAQElHiwMTdIga96K-UI8tCIqILmW103c2l6SHYgV0SItQPCQh5F6bhjgAXyAA"
+      ></iframe>-->
+    </div>
+  </body>
+</html>
