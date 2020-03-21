@@ -29,6 +29,8 @@
       gtag('config', 'UA-136884592-1')
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics ENDS -->
+    <script src="https://d2wy8f7a9ursnm.cloudfront.net/v6/bugsnag.min.js"></script>
+    <script>window.bugsnagClient = bugsnag('e774c7ca6ed898268a1d6622986551d4')</script>
     <script src="./node_modules/qrtip/index.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function (event) {
@@ -65,6 +67,11 @@
           document.querySelectorAll('.kp-landing-book-total-rating-count').forEach(el => {
             el.textContent = landingData.customerReviewsAmount + ' customer reviews'
           })
+        }
+        if (landingData.linkToBookProduct) {
+            document.querySelectorAll('a#kp-view-details-link').forEach(el => {
+                el.href = landingData.linkToBookProduct;
+            })
         }
       })
     </script>
@@ -2187,7 +2194,7 @@
               </div>
 
               <p class="kp-view-details-link">
-                <a id="kp-view-details-link">
+                <a id="kp-view-details-link" href="https://amzn.to/33D0QcE">
                   View book details on Amazon.com
                 </a>
               </p>
