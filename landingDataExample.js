@@ -117,7 +117,44 @@ const examples = [
       'List of Successful Life Journals',
       'Put together of Life Journal news items.',
       'Common life'
-    ].rand()
+    ].rand(),
+    authorName: [
+      'Timothy Ivaïkin',
+      'Timothy S. Ivaïkin',
+      'Timothy S. Ivaikin',
+      'Tim Ivaikin',
+      'Tim S. Ivaikin',
+      'Tim Ivaïkin',
+      'Timothy Adler',
+      'Timothy S. Adler',
+      'Timothy Ive',
+      'Timothy S. Ive',
+      'Timothy Ivaykin',
+      'Timothy Ivajkin',
+      'T.S. Ivaïkin',
+      'T.S. Ivaikin',
+      'Dr. Ivaikin',
+      'Dr. Tim',
+      'Tim I',
+      'TI',
+      'T.I.',
+      'Tim',
+      'Michael David',
+      'Michael Jason',
+      'Alessandro Lorrenzo',
+      'Alessandro Lorenzo',
+      'Alberto Gama',
+      'Alberto Gamma',
+      'Markos Avramidis',
+      'Anet Andreevicius',
+      'Anet Andreevicius',
+      'Christine Ariasztejn',
+      'Margaret Arum and Matt Stolte',
+      'Andrea Antonello',
+      'Andrea Antonello',
+      'Enrico Bu'
+    ].rand(),
+    customerReviewsAmount: Math.round(Math.random() * 30000)
   }
 ]
 

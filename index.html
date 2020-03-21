@@ -15,39 +15,58 @@
     ></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136884592-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-136884592-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || []
+      function gtag () {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
-        gtag('config', 'UA-136884592-1');
+      gtag('config', 'UA-136884592-1')
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics ENDS -->
     <script src="./node_modules/qrtip/index.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-                const urlParams = new URLSearchParams(window.location.search);
-                const landingDataStringQRTipped = urlParams.get('landingData');
-                const landingDataString = qrtip.untip(landingDataStringQRTipped);
-                const landingData = JSON.parse(landingDataString);
-                if (!landingData.showCloseButton) {
-                    const closeButton = document.getElementById('kp-landing-close-button');
-                    if (closeButton) {
-                        closeButton.remove();
-                    }
-                }
-                if(landingData.bookCover) {
-                    document.querySelectorAll('img[src="./media-assets/412V6YJjGNL._SL500_.jpg"]').forEach(el => {
-                        el.src = landingData.bookCover;
-                    });
-                }
-                if (landingData.titleHeadline) {
-                    document.querySelectorAll('.kp-title').forEach(el => {
-                        el.textContent = landingData.titleHeadline;
-                    });
-                }
-        });
+      document.addEventListener('DOMContentLoaded', function (event) {
+        const urlParams = new URLSearchParams(window.location.search)
+        const landingDataStringQRTipped = urlParams.get('landingData')
+        const landingDataString = qrtip.untip(landingDataStringQRTipped)
+        const landingData = JSON.parse(landingDataString)
+        if (!landingData.showCloseButton) {
+          const closeButton = document.getElementById('kp-landing-close-button')
+          if (closeButton) {
+            closeButton.remove()
+          }
+        }
+        if (landingData.bookCover) {
+          document
+            .querySelectorAll(
+              'img[src="./media-assets/412V6YJjGNL._SL500_.jpg"]'
+            )
+            .forEach(el => {
+              el.src = landingData.bookCover
+            })
+        }
+        if (landingData.titleHeadline) {
+          document.querySelectorAll('.kp-title').forEach(el => {
+            el.textContent = landingData.titleHeadline
+          })
+        }
+        if (landingData.authorName) {
+          document.querySelectorAll('.kp-author').forEach(el => {
+            el.textContent = 'by ' + landingData.authorName
+          })
+        }
+        if (landingData.customerReviewsAmount) {
+          document.querySelectorAll('.kp-landing-book-total-rating-count').forEach(el => {
+            el.textContent = landingData.customerReviewsAmount + ' customer reviews'
+          })
+        }
+      })
     </script>
 
     <script type="text/javascript">
@@ -990,18 +1009,9 @@
       href="./media-assets/KindlePlayer.desktop.css"
     />
 
-    <script
-      type="text/javascript"
-      src="./media-assets/jquery.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./media-assets/require.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./media-assets/kp.min.js"
-    ></script>
+    <script type="text/javascript" src="./media-assets/jquery.js"></script>
+    <script type="text/javascript" src="./media-assets/require.js"></script>
+    <script type="text/javascript" src="./media-assets/kp.min.js"></script>
 
     <script type="text/javascript">
       window.ue_ihe = (window.ue_ihe || 0) + 1
@@ -1146,7 +1156,6 @@
           b._rre = m
           b._rt = c && c.timing && c[h] && n
         })(ue_csm, window.performance)
-
         ;(function (s, l) {
           function m (b, e, c) {
             c = c || new Date(+new Date() + t)
@@ -1228,7 +1237,6 @@
             }
           }
         })(ue_csm, window)
-
         ;(function (l, d) {
           function c (b) {
             b = ''
@@ -1269,7 +1277,6 @@
         })(ue_csm, document)
 
         ue_csm.ue.stub(ue, 'impression')
-
         ;(function (k, d, h) {
           function f (a, c, b) {
             a &&
@@ -1387,7 +1394,6 @@
               d.performance.setResourceTimingBufferSize(300),
             r())
         })(ue_csm, window, document)
-
         ;(function (d) {
           d.ue_cel_stub ||
             (d.ue_cel_stub = (function () {
@@ -2167,11 +2173,12 @@
                 </p>
 
                 <p id="kp-buy-widget-logged-in-as" class="kp-logged-in-as">
-                  You're signed in as <b>Timothy</b> (<a
+                  You're signed in
+                  <!--as <b>Timothy</b> (<a
                     id="kp-buy-widget-logout-link"
                     class="kp-logout-link"
                     >Not you?</a
-                  >)
+                  >)-->
                 </p>
 
                 <button id="kp-buy-button" class="kp-buy-amazon-button">
@@ -2904,7 +2911,6 @@ MIT License: https://github.com/lukehaas/css-loaders/blob/step2/LICENSE
               return a
             }
           })(ue_csm)
-
           ;(function (a) {
             var b = document.ue_backdetect
             b && b.ue_back && a.ue && (a.ue.bfini = b.ue_back.value)
@@ -3006,7 +3012,6 @@ MIT License: https://github.com/lukehaas/css-loaders/blob/step2/LICENSE
               )
                 g(f[b])
           }, 'csm-features')(ue_csm, window)
-
           ;(function (b, c) {
             var a = c.images
             a && a.length && b.ue.count('totalImages', a.length)
@@ -3186,7 +3191,6 @@ MIT License: https://github.com/lukehaas/css-loaders/blob/step2/LICENSE
                 })
             }
           })(ue_csm || {}, window.performance)
-
           ;(function (c, d) {
             var b = c.ue,
               a = d.navigator
@@ -3197,7 +3201,6 @@ MIT License: https://github.com/lukehaas/css-loaders/blob/step2/LICENSE
               a.type &&
               b.tag('netInfo:' + a.type)
           })(ue_csm, window)
-
           ;(function (c, d) {
             function h (a, b) {
               for (var c = [], d = 0; d < a.length; d++) {
@@ -3387,7 +3390,6 @@ MIT License: https://github.com/lukehaas/css-loaders/blob/step2/LICENSE
               a.ue_isAdb.yes = h
             }
           }, 'adb')(document, window)
-
           ;(function (c, l, m) {
             function h (a) {
               if (a)
@@ -3459,7 +3461,6 @@ MIT License: https://github.com/lukehaas/css-loaders/blob/step2/LICENSE
               }
             }
           })(ue_csm, window, document)
-
           ;(function (a, c) {
             a.ue_cel ||
               (a.ue_cel = (function () {
