@@ -27,7 +27,15 @@
       document.addEventListener("DOMContentLoaded", function(event) {
         var book = document.createElement("iframe");
         const bookShop = document.querySelector("#book-shop-items");
-        let i = 0;
+        let buffer = "";
+        for (let i = 0; i < 100; ++i) {
+          buffer +=
+            '<iframe title="Book" width="375" height="730" src="https://goodresults.github.io/GoodResults/?landingData=' +
+            generateLandingDataQRTipped() +
+            '"></iframe>';
+        }
+        bookShop.innerHTML = buffer;
+        /*let i = 0;
         const timer = setInterval(() => {
           ++i;
           if (i > 100) {
@@ -37,7 +45,7 @@
             '<iframe title="Book" width="375" height="730" src="https://goodresults.github.io/GoodResults/?landingData=' +
             generateLandingDataQRTipped() +
             '"></iframe>';
-        }, 2000);
+        }, 2000);*/
       });
     </script>
 
