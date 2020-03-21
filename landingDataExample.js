@@ -45,4 +45,6 @@ const examples = [
   }
 ]
 
-console.log(examples[2])
+const qrtip = require('qrtip')
+
+console.log(qrtip.tip(JSON.stringify(examples[2])))
