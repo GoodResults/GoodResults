@@ -27,12 +27,17 @@
       document.addEventListener("DOMContentLoaded", function(event) {
         var book = document.createElement("iframe");
         const bookShop = document.querySelector("#book-shop-items");
-        for (let i = 0; i < 100; ++i) {
+        let i = 0;
+        const timer = setInterval(() => {
+          ++i;
+          if (i > 100) {
+            clearInterval(timer);
+          }
           bookShop.innerHTML +=
             '<iframe title="Book" width="375" height="730" src="https://goodresults.github.io/GoodResults/?landingData=' +
             generateLandingDataQRTipped() +
             '"></iframe>';
-        }
+        }, 2000);
       });
     </script>
 
