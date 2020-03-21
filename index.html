@@ -3,16 +3,14 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script
-      async=""
-      src="./media-assets/showads.v2.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      async=""
-      src="./media-assets/ClientSideMetricsAUIJavascript@jserrorsForester.10f2559e93ec589d92509318a7e2acbac74c343a._V2_.js"
-      crossorigin="anonymous"
-    ></script>
+    <script async="" src="./media-assets/showads.v2.js" crossorigin="anonymous">
+      </!DOCTYPE>
+          <script
+            async=""
+            src="./media-assets/ClientSideMetricsAUIJavascript@jserrorsForester.10f2559e93ec589d92509318a7e2acbac74c343a._V2_.js"
+            crossorigin="anonymous"
+          >
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -96,8 +94,56 @@
             el.innerHTML = landingData.descriptionText;
           });
         }
+        if (landingData.price) {
+          document
+            .querySelectorAll("#kp-buy-button.kp-buy-amazon-button")
+            .forEach(el => {
+              el.innerHTML =
+                "Buy now with 1-Click<sup>®</sup> for&nbsp;$" +
+                landingData.price;
+            });
+        }
       });
     </script>
+
+    <!-- Facebook Pixel -->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2581929498801066");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=2581929498801066&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel ENDS -->
 
     <!-- FullStory -->
     <script>
