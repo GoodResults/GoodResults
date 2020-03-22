@@ -85,6 +85,7 @@
             .forEach(el => {
               var linkWrapper = document.createElement("a");
               linkWrapper.href = landingData.linkToBookProduct;
+              linkWrapper.onclick = 'if(gtag) gtag("event", "Go to buy")';
               wrap(el, linkWrapper);
               //el.href = landingData.linkToBookProduct;
             });
