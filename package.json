@@ -1,0 +1,28 @@
+{
+  "name": "goodresults.ab.landings",
+  "version": "1.0.0",
+  "description": "Generating landings for A/B testing",
+  "main": "generateSitemap.js",
+  "dependencies": {
+    "qrtip": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-sitemap": "node generateSitemap.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoodResults/GoodResults.github.git"
+  },
+  "keywords": [
+    "AB",
+    "landings"
+  ],
+  "author": "Timothy S. Ivaikin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoodResults/GoodResults.github/issues"
+  },
+  "homepage": "https://github.com/GoodResults/GoodResults.github#readme"
+}
