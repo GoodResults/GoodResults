@@ -159,7 +159,11 @@ const generateLandingData = () => {
       "Get Your Best",
       "Get Your Best!",
       "Get Your Best Now",
-      "Best Things are Free"
+      "Best Things are Free",
+
+      // Best
+      "Your are Free Now",
+      "Practice Personal finance"
     ].rand(),
     authorName: [
       "Timothy Ivaïkin",
@@ -199,9 +203,17 @@ const generateLandingData = () => {
       "Margaret Arum and Matt Stolte",
       "Andrea Antonello",
       "Andrea Antonello",
-      "Enrico Bu"
+      "Enrico Bu",
+      // Best
+      "Timothy S. Ivaikin",
+      "Markos Avramidis"
     ].rand(),
-    customerReviewsAmount: Math.round(Math.random() * 30000),
+    customerReviewsAmount:
+      Math.random() > 0.1
+        ? Math.random() > 0.1
+          ? Math.round(Math.random() * 30000)
+          : (Math.round(Math.random() * 30000) + 3056) / 2
+        : (Math.round(Math.random() * 30000) + 8695) / 2,
     linkToBookProduct: "https://amzn.to/33D0QcE",
     descriptionText: [
       "<b>#1 Bestseller</b>",
@@ -311,9 +323,17 @@ const generateLandingData = () => {
         "Become best With our Guide! Buy Now!",
         "Get Your Guide! Shop Now!",
         "Get Your Guide Now!"
-      ].rand()
+      ].rand(),
+      // Best
+      "Over 1 million copies sold! Once we embrace our fears, faults, and uncertainties, once we stop running and avoiding and start confronting painful truths, we can begin to find the courage, perseverance, honesty, responsibility, curiosity, and forgiveness we seek.",
+      "YOU ARE A BADASS<br/>In this refreshingly entertaining how - to guide, bestselling author and world - traveling success coach,"
     ].generateRandomParagraphsBookDescription(),
-    price: Math.round(Math.random() * 100 * 50) / 100
+    price:
+      Math.random() > 0.1
+        ? Math.random() > 0.1
+          ? Math.round(Math.random() * 100 * 50) / 100
+          : Math.round(((Math.random() + 15.73) / 2) * 100 * 50) / 100
+        : Math.round(((Math.random() + 4.7) / 2) * 100 * 50) / 100
   };
 };
 
