@@ -60,7 +60,11 @@ const generateLandingData = () => {
       "./media-assets/cover2.jpg",
       "./media-assets/cover3.jpg",
       "./media-assets/Cover-bestseller-3.jpg",
-      "./media-assets/cover-bestseller-5.jpg"
+      "./media-assets/cover-bestseller-5.jpg",
+      // Best
+      "./media-assets/cover-bestseller-5.jpg",
+      "./media-assets/412V6YJjGNL._SL500_.jpg",
+      "./media-assets/Cover-bestseller-3.jpg",
     ].rand(),
     titleHeadline: [
       "Good Results: Art of efficiency for powerful growth",
@@ -163,7 +167,11 @@ const generateLandingData = () => {
 
       // Best
       "Your are Free Now",
-      "Practice Personal finance"
+      "Practice Personal finance",
+      "American Greatness",
+      "To Live",
+      "You",
+      "Tim Ivaïkin"
     ].rand(),
     authorName: [
       "Timothy Ivaïkin",
@@ -206,14 +214,19 @@ const generateLandingData = () => {
       "Enrico Bu",
       // Best
       "Timothy S. Ivaikin",
-      "Markos Avramidis"
+      "Markos Avramidis",
+      "Tim Ivaïkin",
+      "Tim Ivaikin"
     ].rand(),
     customerReviewsAmount:
-      Math.random() > 0.1
-        ? Math.random() > 0.1
-          ? Math.round(Math.random() * 30000)
-          : (Math.round(Math.random() * 30000) + 3056) / 2
-        : (Math.round(Math.random() * 30000) + 8695) / 2,
+      [
+        Math.round(Math.random() * 30000), 
+        Math.round((Math.round(Math.random() * 30000) + 3056) / 2),  
+        Math.round((Math.round(Math.random() * 30000) + 8695) / 2),  
+        Math.round((Math.round(Math.random() * 30000) + 18997) / 2),
+        Math.round((Math.round(Math.random() * 30000) + 17851) / 2),
+        Math.round((Math.round(Math.random() * 30000) + 26423) / 2),
+      ].rand(),
     linkToBookProduct: "https://amzn.to/33D0QcE",
     descriptionText: [
       "<b>#1 Bestseller</b>",
@@ -326,14 +339,22 @@ const generateLandingData = () => {
       ].rand(),
       // Best
       "Over 1 million copies sold! Once we embrace our fears, faults, and uncertainties, once we stop running and avoiding and start confronting painful truths, we can begin to find the courage, perseverance, honesty, responsibility, curiosity, and forgiveness we seek.",
-      "YOU ARE A BADASS<br/>In this refreshingly entertaining how - to guide, bestselling author and world - traveling success coach,"
+      "YOU ARE A BADASS<br/>In this refreshingly entertaining how - to guide, bestselling author and world - traveling success coach,",
+      "Over 0 million copies sold<br/>Human beings are flawed and limited—\"not everybody can be extraordinary, there are winners and losers in society, and some of it is not fair or your fault.\" Timothy advises us to get to know our limitations and accept them.<br/>"+
+      "\"F**k positivity,\" Timothy Ivaikin says. What would your social calendar look like?",
+      "By the end of You Are a Badass, you'll understand why you are how you are, how to love what you can't change, how to change what you don't love, and how to use The Force to kick some serious ass.",
+      "Improve your well-being every day with solutions-based, self-care strategies that work. Timothy Ivaikin, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results. The workbook includes exercises, explanations, and reviews to help readers make sense of it all. Every chapter introduces readers to a practical tool for quickly establishing and maintaining a strong sense of self.",
+      "<b>Over 6 million copies sold</b>",
+      "<b>#1 Bestseller</b><br><b>Over 3 million copies sold</b><br>In his wildly popular Internet blog, Timothy doesn’t sugarcoat or equivocate. But when we submit our minds to Christ, the promises and goodness of God flood our lives in remarkable ways. “A must-have resource for anyone looking to get control of their thoughts.”<br>No matter your goals, Habits offers a proven framework for improving -- every day.<br>Timothy makes the argument, backed both by academic research and well- timed poop jokes, that improving our lives hinges not on our ability to turn lemons into lemonade, but on learning to stomach lemons better.<br><b>Over 6 million copies sold</b><br>You’ll also learn actionable techniques to fight anxiety, demotivation, or whatever else is holding you back from building the life you want to live. Timothy Ivaikin knows what it’s like to swirl in a spiral of destructive thoughts, but she also knows we don’t have to stay stuck in toxic thinking patterns. <b>BESTSELLER</b><br>The workbook includes exercises, explanations, and reviews to help readers make sense of it all.<br>The Self Care Prescription empowers you to find balance and purpose in your relationships, work, and life. Timothy Ivaikin, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results. Timothy Ivaikin, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results."
     ].generateRandomParagraphsBookDescription(),
-    price:
-      Math.random() > 0.1
-        ? Math.random() > 0.1
-          ? Math.round(Math.random() * 100 * 50) / 100
-          : Math.round(((Math.random() + 15.73) / 2) * 100 * 50) / 100
-        : Math.round(((Math.random() + 4.7) / 2) * 100 * 50) / 100
+    price: [
+      Math.round(Math.random() * 100 * 50) / 100, 
+      Math.round((((Math.random())) * 100 * 50 + 15.73)/2) / 100, 
+      Math.round((((Math.random())) * 100 * 50 + 4.7)/2) / 100, 
+      Math.round((((Math.random())) * 100 * 50 + 20.91) /2)/ 100, 
+      Math.round((((Math.random())) * 100 * 50+ 47.3)/2) / 100, 
+      Math.round((((Math.random())) * 100 * 50 + 39.15)/2) / 100].rand()
+      
   };
 };
 
