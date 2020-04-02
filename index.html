@@ -95,10 +95,14 @@
               const onBuyBookEvent = () => {
                 if (gtag) {
                   gtag("event", "Go to buy");
-                  console.log("Event run = Go to buy");
+                  console.log("Event run = Go to buy (Google Analytics)");
                   window.open(landingData.linkToBookProduct);
                 } else {
                   console.error("Cannot find gtag");
+                }
+                if (ym) {
+                  ym(61563427, "reachGoal", "buy-book");
+                  console.log("Event run = Go to buy (Ya Metrika)");
                 }
               };
               linkWrapper.onclick = onBuyBookEvent;
