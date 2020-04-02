@@ -1,6 +1,6 @@
 {
   "name": "goodresults.ab.landings",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Generating landings for A/B testing",
   "main": "generateSitemap.js",
   "dependencies": {
@@ -9,7 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-sitemap": "node generateSitemap.js"
+    "generate-sitemap": "node generateSitemap.js",
+    "generate-one-example": "node landingDataGenerator.js"
   },
   "repository": {
     "type": "git",
