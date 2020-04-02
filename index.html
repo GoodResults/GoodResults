@@ -37,7 +37,14 @@
         const urlParams = new URLSearchParams(window.location.search);
         const landingDataStringQRTipped = urlParams.get("landingData");
         const landingDataString = qrtip.untip(landingDataStringQRTipped);
-        const landingData = JSON.parse(landingDataString);
+        const DEFAULT_BOOK_LINK = "https://amzn.to/33D0QcE";
+        let landingData = { linkToBookProduct: DEFAULT_BOOK_LINK };
+        try {
+          landingData = JSON.parse(landingDataString);
+        } catch (e) {
+          console.log(e);
+        }
+
         if (!landingData.showCloseButton) {
           const closeButton = document.getElementById(
             "kp-landing-close-button"
@@ -83,9 +90,19 @@
               "a#kp-view-details-link, #kp-landing-read-sample-button, .kp-show-more-expand-link, #kp-buy-button.kp-buy-amazon-button"
             )
             .forEach(el => {
-              var linkWrapper = document.createElement("a");
-              linkWrapper.href = landingData.linkToBookProduct;
-              linkWrapper.onclick = 'if(gtag) gtag("event", "Go to buy")';
+              var linkWrapper = document.createElement("span");
+              //linkWrapper.href = landingData.linkToBookProduct;
+              const onBuyBookEvent = () => {
+                if (gtag) {
+                  gtag("event", "Go to buy");
+                  console.log("Event run = Go to buy");
+                  window.open(landingData.linkToBookProduct);
+                } else {
+                  console.error("Cannot find gtag");
+                }
+              };
+              linkWrapper.onclick = onBuyBookEvent;
+              //linkWrapper.target = "_blank";
               wrap(el, linkWrapper);
               //el.href = landingData.linkToBookProduct;
             });
@@ -106,6 +123,46 @@
         }
       });
     </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function() {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(61563427, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+        ecommerce: "dataLayer"
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/61563427"
+          style="position:absolute; left:-9999px;"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <!-- Facebook Pixel -->
     <!-- Facebook Pixel Code -->
